@@ -1,5 +1,6 @@
 import FortuneWheel from '../objects/fortuneWheel'
 import FpsText from '../objects/fpsText'
+import Pin from '../objects/wheelPin'
 
 export default class MainScene extends Phaser.Scene {
   fpsText
@@ -9,8 +10,8 @@ export default class MainScene extends Phaser.Scene {
   }
 
   create() {
-    var fw = new FortuneWheel(this, this.cameras.main.width / 2, this.cameras.main.width / 2);
-
+    new FortuneWheel(this, this.cameras.main.width / 2, this.cameras.main.width / 2);
+    new Pin(this, this.cameras.main.width / 2, this.cameras.main.width / 2.6);
     this.fpsText = new FpsText(this)
     // display the Phaser.VERSION
     this.add

@@ -10,7 +10,7 @@ export default class FortuneWheel extends Phaser.Physics.Arcade.Sprite {
       super(scene, x, y, 'fortune-wheel')
       scene.add.existing(this);
       scene.physics.add.existing(this)
-
+      
       this.prizeText = scene.add.text(scene.centerX, 480, "");
       
       this.canSpin = true;
